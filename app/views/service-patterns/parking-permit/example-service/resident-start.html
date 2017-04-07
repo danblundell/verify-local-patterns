@@ -20,7 +20,7 @@
       {% set singleCost = council.permitsCosts[0] %}
     {% endif %}
     <p>
-      Resident's parking permits cost {% if singleCost %}£{{singleCost}}.{% else %}between £{{council.permitsCosts[0]}} and £{{council.permitsCosts[council.permitsCosts.length-1]}}, depending on your vehicle type and
+      Resident's parking permits cost {% if singleCost %}£{{singleCost}}.{% else %}between £{{council.permitsCosts | first}} and £{{council.permitsCosts | last}}, depending on your vehicle type and
 
 
       {% if council.limitByHousehold %}
